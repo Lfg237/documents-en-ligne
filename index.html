@@ -70,22 +70,27 @@ border-radius:5px;
 transition:0.3s;
 }
 
-/* MENU */
+/* MENU FIXÉ + SCROLL */
 .menu{
 position:fixed;
 top:0;
 right:-280px;
 width:280px;
-height:100%;
+height:100vh;
 background:rgba(10,15,30,0.95);
 backdrop-filter:blur(10px);
 padding-top:70px;
+padding-bottom:80px; /* 🔥 évite que le footer cache */
 display:flex;
 flex-direction:column;
 gap:10px;
 transition:0.3s;
-z-index:9;
+z-index:999; /* 🔥 au dessus de tout */
 border-left:1px solid rgba(255,255,255,0.1);
+
+overflow-y:auto;
+overflow-x:hidden;
+-webkit-overflow-scrolling:touch;
 }
 
 .menu a{
@@ -94,18 +99,7 @@ text-decoration:none;
 color:white;
 border-bottom:1px solid rgba(255,255,255,0.1);
 }
-.menu::-webkit-scrollbar{
-width:6px;
-}
 
-.menu::-webkit-scrollbar-thumb{
-background:rgba(255,255,255,0.3);
-border-radius:10px;
-}
-
-.menu::-webkit-scrollbar-track{
-background:transparent;
-}
 .menu a:hover{
 background:rgba(255,255,255,0.1);
 }
@@ -131,6 +125,7 @@ position:fixed;
 bottom:0;
 width:100%;
 border-top:1px solid rgba(255,255,255,0.1);
+z-index:5; /* 🔥 en dessous du menu */
 }
 
 </style>
@@ -154,32 +149,27 @@ border-top:1px solid rgba(255,255,255,0.1);
 
 <a href="https://cv-ruby-nu-25.vercel.app/" target="_blank">📄 Curriculum vitæ</a>
 
+<a href="https://lettre-de-motivation-smoky.vercel.app/" target="_blank">🧭 Lettre de motivation</a>
 
-<a
-href="https://lettre-de-motivation-smoky.vercel.app/"target="_blank">🧭 lettre de motivation</a>
-
- <a
-href="https://module-paiement.vercel.app/" target="_blank">📅 Calendrier personnalisé</a>
+<a href="https://module-paiement.vercel.app/" target="_blank">📅 Calendrier personnalisé</a>
 
 <a href="https://secr-taire.vercel.app/" target="_blank">🏃 Calendrier sportifs</a>
+
 <a href="https://api-lime-nine-94.vercel.app/" target="_blank">⚰️ Programme inhumation</a>
+
 <a href="https://devislesfacilitateurs.vercel.app/" target="_blank">🏗️ Devis estimatif BTP</a>
 
-<a
-href="https://cartes-de-visite-pro-6wsn.vercel.app/"target="_blank">💧 cartes de visites </a>
+<a href="https://cartes-de-visite-pro-6wsn.vercel.app/" target="_blank">💧 Cartes de visites</a>
 
-<a
-href="https://certificat-dipl-me.vercel.app/" target="_blank"> 🎓certificat & attestation</a>
+<a href="https://certificat-dipl-me.vercel.app/" target="_blank">🎓 Certificat & attestation</a>
 
-<a
-href="https://portrait-hd.vercel.app/" target="_blank">🖼️portrait professionnel</a>
-<a href="https://contrat-de-travail.vercel.app/" target="_blank">🦺 contrat de travail</a>
+<a href="https://portrait-hd.vercel.app/" target="_blank">🖼️ Portrait professionnel</a>
 
-<a
-href="https://fiche-tarifaire.vercel.app/"target="_blank">menu/fiche tarifaire</a>
+<a href="https://contrat-de-travail.vercel.app/" target="_blank">🦺 Contrat de travail</a>
 
-<a
-href="https://billet-d-invitation-mariage.vercel.app/"target="_blank">menu/ billet d'invitation mariage</a>
+<a href="https://fiche-tarifaire.vercel.app/" target="_blank">📋 Fiche tarifaire</a>
+
+<a href="https://billet-d-invitation-mariage.vercel.app/" target="_blank">💌 Invitation mariage</a>
 
 <a href="https://lesfacilitateurs.vercel.app" target="_blank">🏠 Retour accueil</a>
 

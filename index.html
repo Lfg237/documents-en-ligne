@@ -53,7 +53,44 @@ color:pink;
 font-weight:bold;
 font-size:14px;
 }
+.menu{
+position:fixed;
+top:60px; /* hauteur du header */
+right:-260px;
+width:260px;
+height:calc(100vh - 60px);
 
+background:rgba(10,15,30,0.98);
+backdrop-filter:blur(10px);
+
+display:flex;
+flex-direction:column;
+gap:5px;
+
+overflow-y:auto;
+overflow-x:hidden;
+-webkit-overflow-scrolling:touch;
+
+/* 👇 évite que les éléments soient cachés */
+padding-top:15px;
+padding-bottom:120px;
+
+transition:0.3s;
+z-index:999;
+
+border-left:1px solid rgba(255,255,255,0.1);
+}
+.menu.open{
+right:0;
+}
+.menu::-webkit-scrollbar{
+width:4px;
+}
+
+.menu::-webkit-scrollbar-thumb{
+background:rgba(255,255,255,0.3);
+border-radius:10px;
+}
 /* MENU FIXÉ + SCROLL ULTRA FIX */
 .menu{
 position:fixed;

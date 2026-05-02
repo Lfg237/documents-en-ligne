@@ -53,9 +53,11 @@ color:pink;
 font-weight:bold;
 font-size:14px;
 }
+
+/* 🔥 MENU CORRIGÉ */
 .menu{
 position:fixed;
-top:60px; /* hauteur du header */
+top:60px;
 right:-260px;
 width:260px;
 height:calc(100vh - 60px);
@@ -71,56 +73,30 @@ overflow-y:auto;
 overflow-x:hidden;
 -webkit-overflow-scrolling:touch;
 
-/* 👇 évite que les éléments soient cachés */
-padding-top:15px;
-padding-bottom:120px;
+/* 🔥 espace bas pour voir dernier bouton */
+padding-top:10px;
+padding-bottom:160px;
 
 transition:0.3s;
 z-index:999;
 
 border-left:1px solid rgba(255,255,255,0.1);
 }
+
 .menu.open{
 right:0;
 }
+
+/* Scroll style */
 .menu::-webkit-scrollbar{
-width:4px;
-}
-
-.menu::-webkit-scrollbar-thumb{
-background:rgba(255,255,255,0.3);
-border-radius:10px;
-}
-/* MENU FIXÉ + SCROLL ULTRA FIX */
-.menu{
-position:fixed;
-top:60px; /* 🔥 sous le header */
-right:-260px;
-width:260px;
-height:calc(100vh - 60px); /* 🔥 hauteur parfaite */
-background:rgba(10,15,30,0.98);
-backdrop-filter:blur(10px);
-display:flex;
-flex-direction:column;
-transition:0.3s;
-z-index:999;
-
-overflow-y:auto;
--webkit-overflow-scrolling:touch;
-
-/* 🔥 IMPORTANT */
-padding-bottom:120px; /* espace bas pour dernier lien */
-}
-
-/* SCROLL visible */
-.menu::-webkit-scrollbar{
-width:6px;
+width:5px;
 }
 .menu::-webkit-scrollbar-thumb{
 background:gold;
 border-radius:10px;
 }
 
+/* Liens */
 .menu a{
 padding:14px;
 text-decoration:none;
@@ -133,8 +109,9 @@ font-size:14px;
 background:rgba(255,255,255,0.1);
 }
 
-.menu.open{
-right:0;
+/* 🔥 force visibilité dernier bouton */
+.menu a:last-child{
+margin-bottom:40px;
 }
 
 /* CONTENU */
@@ -165,7 +142,7 @@ z-index:1;
 <div class="title">🩷 Mini Secrétariat</div>
 <div id="time"></div>
 
-<div onclick="toggleMenu()" style="cursor:pointer;">
+<div onclick="toggleMenu()" style="cursor:pointer;font-size:20px;">
 ☰
 </div>
 </header>
@@ -202,6 +179,7 @@ z-index:1;
 
 <script>
 
+/* MENU */
 function toggleMenu(){
 document.getElementById("menu").classList.toggle("open");
 }
